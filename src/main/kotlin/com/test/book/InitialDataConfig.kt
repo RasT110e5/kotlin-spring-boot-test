@@ -6,7 +6,7 @@ import org.springframework.beans.factory.InitializingBean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
-class InitialDataConfig constructor(val repository: BookRepository) : InitializingBean {
+class InitialDataConfig constructor(private val repository: BookRepository) : InitializingBean {
     override fun afterPropertiesSet() {
         repository.save(Book(123, "Test"))
         repository.save(Book(126, "Another Test"))
