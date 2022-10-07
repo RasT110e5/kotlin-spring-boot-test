@@ -26,7 +26,7 @@ internal class BookServiceImplTest {
     @Test
     @DisplayName("it should return items from repository")
     fun service_() {
-        whenever(repository.findAll()).thenReturn(mutableListOf(Book(1, 123, "test")))
+        whenever(repository.findAll()).thenReturn(mutableListOf(Book(123, "test")))
         val books = service.getBooks()
         assertFalse(books.isEmpty())
         assertEquals(1, books.size)

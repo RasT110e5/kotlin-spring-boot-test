@@ -36,7 +36,7 @@ internal class BookControllerTest {
     @Test
     @DisplayName("should return Book that was created")
     fun bookControllerTest_() {
-        whenever(service.createBook(any())).thenReturn(Book(1, 123, "test book"))
+        whenever(service.createBook(any())).thenReturn(Book(123, "test book"))
         mvc.perform(
             post("/api/book").content("{\"isbn\":123,\"name\":\"test book\"}")
                 .contentType(MediaType.APPLICATION_JSON)

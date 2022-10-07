@@ -6,12 +6,10 @@ import javax.persistence.GenerationType
 import javax.persistence.Id
 
 @Entity
-data class Book(
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    var id: Long?,
+class Book(
     val isbn: Long,
     val name: String,
-) {
-    constructor(isbn: Long, name: String) : this(null, isbn, name)
-}
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    var id: Long? = null
+)
