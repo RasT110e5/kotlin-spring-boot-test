@@ -19,7 +19,6 @@ import org.mockito.kotlin.whenever
 internal class BookServiceImplTest {
     @Mock
     private lateinit var repository: BookRepository
-
     @InjectMocks
     private lateinit var service: BookServiceImpl
 

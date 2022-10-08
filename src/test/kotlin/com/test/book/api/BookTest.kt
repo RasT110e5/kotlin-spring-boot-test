@@ -8,9 +8,8 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest
 
 @DataJpaTest(showSql = true)
 internal class BookTest {
-
     @Autowired
-    lateinit var repository: BookRepository;
+    lateinit var repository: BookRepository
 
     private fun saveNewBook(): Book {
         val book = Book(1234, "my book")
@@ -24,7 +23,6 @@ internal class BookTest {
         val book = saveNewBook()
         assertEquals(repository.getReferenceById(1), book)
     }
-
 
     @Test
     @DisplayName("book is deletable")

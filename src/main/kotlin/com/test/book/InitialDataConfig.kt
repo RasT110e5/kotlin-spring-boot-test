@@ -3,6 +3,7 @@ package com.test.book
 import com.test.book.api.Book
 import com.test.book.api.BookRepository
 import org.springframework.beans.factory.InitializingBean
+import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
 
 @Configuration
